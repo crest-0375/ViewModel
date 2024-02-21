@@ -2,12 +2,10 @@ package com.practice.viewmodel.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.practice.viewmodel.R
-import com.practice.viewmodel.viewmodel.DataViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navView: BottomNavigationView

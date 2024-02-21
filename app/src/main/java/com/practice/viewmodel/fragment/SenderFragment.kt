@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.practice.viewmodel.R
@@ -21,9 +20,11 @@ class SenderFragment : Fragment() {
     private var _binding: FragmentSenderBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: DataViewModel
+
     init {
         Log.d("TAG", "SenderFragment")
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
