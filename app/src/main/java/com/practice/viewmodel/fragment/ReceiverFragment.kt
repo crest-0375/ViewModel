@@ -1,6 +1,7 @@
 package com.practice.viewmodel.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,12 +16,15 @@ class ReceiverFragment : Fragment() {
     private var _binding: FragmentReciverBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: DataViewModel
+    init {
+        Log.d("TAG", "ReceiverFragment")
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentReciverBinding.inflate(inflater, container, false)
-        viewModel = (activity as MainActivity).viewModel
+        viewModel = ViewModelProvider((activity as MainActivity))[DataViewModel::class.java]
         return binding.root
     }
 
